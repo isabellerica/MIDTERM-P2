@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Users</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            font-size: 14px;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            font-size: 34px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #495057;
+            margin-top: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card img {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+        }
+
+        strong {
+            font-size: 18px;
+            color: #343a40;
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        p strong {
+            color: #212529;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ABC College</h1>
+    <h2>Library Users</h2>
+    <div class="container" id="student-list"></div>
+
+    <script>
+        const studentsXML = `
+        <students>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_simon2-442x500.jpg</picture>
+                <name>Simon Basset</name>
+                <course>BSIS</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof.Basset</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_pen.jpg</picture>
+                <name>Penelope Featherington</name>
+                <course>BSIS</course>
+                <year>3</year>
+                <section>BG1</section>
+                <adviser>Prof. Basset</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://i.pinimg.com/736x/5f/80/6d/5f806de9acde56a8f0a57489b9093ecc.jpg</picture>
+                <name>Kate Sharma</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG3</section>
+                <adviser>Prof. Sharma</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://i.pinimg.com/736x/b2/f0/27/b2f02776a4ed2bf487d9312ec718c7e6.jpg</picture>
+                <name>Lord Anthony</name>
+                <course>BSCS</course>
+                <year>3</year>
+                <section>CS1</section>
+                <adviser>Prof. Lim</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://people.com/thmb/EhF6Cabbc-AD0oMG43fkwsoVBk0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(879x25:881x27)/bridgerton-2-2000-1-2883945685784597a2b1c86cab1a9193.jpg</picture>
+                <name>Daphne Bridgerton</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Villafuerte</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_Ben.jpg</picture>
+                <name>Benedict</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/francesca.jpg</picture>
+                <name>Francesca</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Batumbakal</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://ew.com/thmb/Tcum6OTWjL0_2HGVYmXlDTO22aY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BRIDGERTON-S3-Luke-Newton-051024-9e0228f89b214f7eaef3de93d293bbf1.jpg</picture>
+                <name>Collin</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/LadyDanbury-442x500.png</picture>
+                <name>Lady Agatha</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_Hy.jpg</picture>
+                <name>Hyacinth</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+        </students>`;
+
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(studentsXML, "text/xml");
+        const students = xmlDoc.getElementsByTagName("student");
+        const container = document.getElementById("student-list");
+
+        for (let student of students) {
+            const studentCard = document.createElement("div");
+            studentCard.classList.add("card");
+            studentCard.innerHTML = `
+                <div class="card-header">
+                    <img src="${student.getElementsByTagName("picture")[0].textContent}" alt="Student Picture">
+                    <strong>${student.getElementsByTagName("name")[0].textContent}</strong>
+                </div>
+                <p><strong>Course:</strong> ${student.getElementsByTagName("course")[0].textContent}</p>
+                <p><strong>Year Level / Section:</strong> ${student.getElementsByTagName("year")[0].textContent} ${student.getElementsByTagName("section")[0].textContent}</p>
+                <p><strong>Adviser:</strong> ${student.getElementsByTagName("adviser")[0].textContent}</p>
+                <p><strong>School Year:</strong> ${student.getElementsByTagName("schoolYear")[0].textContent}</p>
+            `;
+            container.appendChild(studentCard);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <students>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_simon2-442x500.jpg</picture>
+                <name>Simon Basset</name>
+                <course>BSIS</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof.Basset</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_pen.jpg</picture>
+                <name>Penelope Featherington</name>
+                <course>BSIS</course>
+                <year>3</year>
+                <section>BG1</section>
+                <adviser>Prof. Basset</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://i.pinimg.com/736x/5f/80/6d/5f806de9acde56a8f0a57489b9093ecc.jpg</picture>
+                <name>Kate Sharma</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG3</section>
+                <adviser>Prof. Sharma</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://i.pinimg.com/736x/b2/f0/27/b2f02776a4ed2bf487d9312ec718c7e6.jpg</picture>
+                <name>Lord Anthony</name>
+                <course>BSCS</course>
+                <year>3</year>
+                <section>CS1</section>
+                <adviser>Prof. Lim</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://people.com/thmb/EhF6Cabbc-AD0oMG43fkwsoVBk0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(879x25:881x27)/bridgerton-2-2000-1-2883945685784597a2b1c86cab1a9193.jpg</picture>
+                <name>Daphne Bridgerton</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Villafuerte</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_Ben.jpg</picture>
+                <name>Benedict</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/francesca.jpg</picture>
+                <name>Francesca</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Batumbakal</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://ew.com/thmb/Tcum6OTWjL0_2HGVYmXlDTO22aY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BRIDGERTON-S3-Luke-Newton-051024-9e0228f89b214f7eaef3de93d293bbf1.jpg</picture>
+                <name>Collin</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/LadyDanbury-442x500.png</picture>
+                <name>Lady Agatha</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+            <student>
+                <picture>https://juliaquinn.com/WP/wp-content/uploads/2022/03/WAX_Hy.jpg</picture>
+                <name>Hyacinth</name>
+                <course>BSIT</course>
+                <year>3</year>
+                <section>BG2</section>
+                <adviser>Prof. Santos</adviser>
+                <schoolYear>2024-2025</schoolYear>
+            </student>
+        </students>
